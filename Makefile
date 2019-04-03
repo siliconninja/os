@@ -15,7 +15,7 @@ contain := \
 		-v $(PWD)/config.yml:/home/build/config.yml \
 		-u $(userid):$(userid) \
 		-e DEVICE=$(device) \
-		hashbang-os:latest
+		hashbang/os:latest
 
 default: build
 
@@ -23,7 +23,7 @@ image:
 	@docker build \
 		--build-arg UID=$(userid) \
 		--build-arg GID=$(groupid) \
-		-t hashbang-os:latest .
+		-t hashbang/os:latest .
 
 manifest: image
 	$(contain) manifest
@@ -73,7 +73,7 @@ clean: image
 	@$(contain) clean
 
 mrproper: clean
-	@docker image rm -f hashbang-os:latest
+	@docker image rm -f hashbang/os:latest
 	rm -rf build
 
 install: tools
