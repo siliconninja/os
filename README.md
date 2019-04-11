@@ -1,3 +1,6 @@
+# Update 4/11/19: This fork is unmaintained
+I don't have time to test this on my own device because of school. I have relicensed this repo to be in the public domain so that the hashbang devs can use my ideas without any attribution restrictions. Thank you for this great open-source Android ROM project!
+
 # #!os #
 
 <http://github.com/hashbang/os>
